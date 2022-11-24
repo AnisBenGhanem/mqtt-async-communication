@@ -3,12 +3,12 @@
 > ### A- Create our venv
 > ### B- Install necessary packages
 > ### C- Writing and Explaining the Subscriber Code
-## 2- Dockorizing the Challenge
+## 2- Dockerizing the Challenge
 > ### A- Running Mosquitto on Docker and Testing it
 > ### B- Dockerizing the Asynchronous Subscriber script
 > ### C- Docker Coompose
 ## 3- Running the project
-</br></br></br></br>
+</br></br></br>
 
 
 
@@ -34,9 +34,8 @@ pip install asyncio
 
 ---
 ## C- Writing and Explaining the Subscriber Code
-we imported asyncio to run function asynchronously using async/await syntax.
-signal library will help use defining custom handlers to be executed when a signal is received.
-gmqtt it is a library that allows asynchronous messaging over MQTT.
+we imported asyncio to run function asynchronously using async/await syntax,
+signal library will help use defining custom handlers to be executed when a signal is received, and gmqtt it is a library that allows asynchronous messaging over MQTT.
 ``` python
 import asyncio
 import signal
@@ -56,7 +55,7 @@ ASYNC_QUEUE = asyncio.Queue(maxsize=50)
 ```
 
 ____CALLBACKS____\
-Since this is a test, we have only applyed async on the on_message function to make it asyunchronous.
+Since this is a test, we have only applied async on the on_message function to make it asynchronous.
 
 ``` python
 def on_connect(client, flags, rc, properties):
@@ -129,7 +128,7 @@ if __name__ == '__main__':
 ---
 
 
-# 2- Dockorizing the Challenge
+# 2- Dockerizing the Challenge
 
 ## A- Running Mosquitto on Docker and Testing it
 
@@ -173,7 +172,7 @@ then, we built the docker image for the subscriber script and named it livello-c
 docker build -t livello-challenge client/.
 ```
 ---
-## C- Docker Coompose
+## C- Docker Compose
 We prepared the docker-compose file.
 ``` docker
 version: '3'
@@ -201,16 +200,15 @@ install mosquitto client
 sudo apt-get install mosquitto-clients
 ```
 
-clone this project 
-https://github.com/AnisBenGhanem/mqtt-async-communication
 
+Clone this project [Livello Challenge](https://github.com/AnisBenGhanem/mqtt-async-communication).
 
-run docker-compose
+Run docker-compose
 ``` shell
 docker-compose up
 ```
 
-run the publisher script
+Run the publisher script
 ``` shell
 bach publisher.sh
 ```
