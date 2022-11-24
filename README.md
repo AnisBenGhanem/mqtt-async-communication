@@ -181,11 +181,11 @@ services:
   mosquitto:
     image: eclipse-mosquitto
     volumes:
-      - /home/anis/Desktop/mosquitto-test/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./config/mosquitto.conf:/mosquitto/config/mosquitto.conf
     ports:
       - 1883:1883
   livello-product:
-    image: livello-challenge
+    image: anisbg/async-communication:livelloChallenge
     depends_on:
       - mosquitto
 ```
