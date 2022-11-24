@@ -7,6 +7,6 @@ services:
     ports:
       - 1883:1883
   livello-product:
-    image: livello-challenge
+    image: anisbg/async-communication:livelloChallenge
     depends_on:
       - mosquitto
