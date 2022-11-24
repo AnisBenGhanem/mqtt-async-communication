@@ -196,3 +196,21 @@ docker-compose up
 
 ---
 # 3- Running the project
+install mosquitto client
+``` shell
+sudo apt-get install mosquitto-clients
+```
+
+clone this project 
+https://github.com/AnisBenGhanem/mqtt-async-communication
+
+
+run docker-compose
+``` shell
+docker-compose up
+```
+
+run the publisher script
+``` shell
+bach publisher.sh
+```
