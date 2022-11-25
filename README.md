@@ -195,7 +195,7 @@ docker-compose up
 
 ---
 # 3- Running the project
-install mosquitto client
+install mosquitto client on your machine
 ``` shell
 sudo apt-get install mosquitto-clients
 ```
